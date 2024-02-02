@@ -18,35 +18,42 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
+        <form class="search-form">
           <input
             type="search"
             placeholder="Enter a city.."
             required
-            class="search-input"
+            class="search-form-input"
           />
-          <input type="submit" value="Search" />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
         <h1>
-          <div>☀️</div>
-          <div>12°C</div>
+          <div class="weather-icon">
+            🌤
+            <div class="current-date-time">
+              Monday
+              <br />
+              15:30pm
+            </div>
+          </div>
+
+          <div class="weather-value">
+            12
+            <div class="weather-unit">°C</div>
+          </div>
         </h1>
         <p></p>
-        <h2><span>Paris</span></h2>
-        <div>
+        <h2><div class="weather-city">PARIS</div></h2>
+        <div></div>
+        <div class="weather-feel">
           <p>
-            Monday
+            Sunny, Scattered cloud
             <br />
-            15:30 pm
+            Humidity:<strong>66%</strong>, Windy:<strong>3.13km/h</strong>
           </p>
         </div>
-        <p>
-          Sunny, Scattered cloud
-          <br />
-          Humidity: 66%, Windy: 3.13km
-        </p>
       </main>
 
       <footer>
