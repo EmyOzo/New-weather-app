@@ -37,6 +37,9 @@ header {
   color: #ff7e67;
   font-size: 15px;
 }
+h1 {
+  text-align: center;
+}
 .weather-icon {
   font-size: 80px;
   display: flex;
@@ -49,7 +52,7 @@ header {
   color: rgba(0, 0, 0, 0.6);
   display: flex;
   margin-top: 0;
-  margin-left: 200px;
+  margin-left: 170px;
   padding: 10px 0;
 }
 .weather-value {
