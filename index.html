@@ -35,12 +35,9 @@
           <div class="weather-icon">
             🌤
             <div class="current-date-time">
-              Monday
-              <br />
-              15:30pm
+              <span id="time"></span>
             </div>
           </div>
-
           <div class="weather-value" id="temperature">12</div>
           <div class="weather-unit" id="temperature-unit">°C</div>
         </h1>
@@ -49,9 +46,11 @@
         <div></div>
         <div class="weather-feel">
           <p>
-            Sunny, Scattered cloud
+            Weather description:
+            <strong> <span id="weather-condition"></span></strong>
             <br />
-            Humidity:<strong>66%</strong>, Windy:<strong>3.13km/h</strong>
+            Humidity:<strong><span id="humidity">66</span></strong
+            >, Windy:<strong><span id="windy">3.13</span></strong>
           </p>
         </div>
       </main>
