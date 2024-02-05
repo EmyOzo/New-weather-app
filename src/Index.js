@@ -6,28 +6,9 @@ function updateWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#windy");
   let timeElement = document.querySelector("#time");
-  let date = response.data.time;
-  let currentDate = new Date(date * 1000);
+  let date = new Date(response.data.time * 1000);
 
   let iconElement = document.querySelector("#icon");
-  function formatDate(dates) {
-    let hours = currentDate.getHours();
-    let minutes = currentDate.getMinutes();
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    let day = days[currentDate.getDay()];
-    if (minutes < 10) {
-      minutes = `0${minutes}`;
-    }
-    return `${day} ${hours}:${minutes}`;
-  }
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -39,6 +20,25 @@ function updateWeather(response) {
               src="${response.data.condition.icon_url}"
              class="#icon"
             />`;
+}
+
+function formatDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
