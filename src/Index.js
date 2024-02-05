@@ -8,7 +8,6 @@ function updateWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = response.data.time;
   let currentDate = new Date(date * 1000);
-  console.log(currentDate);
 
   let iconElement = document.querySelector("#icon");
   function formatDate(dates) {
