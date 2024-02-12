@@ -46,11 +46,10 @@ header {
 }
 h1 {
   text-align: left;
-  margin top: 0;
 }
 .weather-center {
   display: block;
-  
+
   position: relative;
   top: 50px;
   margin: 0;
@@ -125,10 +124,10 @@ h1 {
 }
 
 footer {
-  padding: 10px 10px;
+  padding: 20px 0 0 0;
   border-top: 1px solid #edcab3;
   text-align: center;
-  font-size: 8px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 500;
   color: rgba(0, 0, 0, 0.6);
 }
