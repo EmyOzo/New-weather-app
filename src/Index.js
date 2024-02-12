@@ -55,6 +55,11 @@ function startSearch(event) {
   searchCity(searchFormInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[date.getDay()];
+}
 function getForecast(city) {
   let apiKey = "8fc7b0cb70e00c633od459d453bbta45";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -64,22 +69,29 @@ function getForecast(city) {
 function displayForecast(response) {
   console.log(response.data);
 
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      ` <div class="col-2">
-                <div class="row"> <span class="weather-forecast-day">${day}</span>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        ` <div class="col-2">
+                <div class="row"> <span class="weather-forecast-day">${formatDay(
+                  day.time
+                )}</span>
 
-<span class ="icon">🌤</span>
+ <img src="${day.condition.icon_url} "class ="icon" />
+
 
 <span class="weather-forecast-temp">
-<span class="weather-forecast-max">18°</span>
- --- <span class="weather-forecast-min">12°</span>
+<span class="weather-forecast-max">${Math.round(
+          day.temperature.maximum
+        )}° -- </span>
+ <span class="weather-forecast-min">${Math.round(
+   day.temperature.minimum
+ )}°</span>
  </span>`;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
