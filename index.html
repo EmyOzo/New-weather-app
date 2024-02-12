@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,62 +14,67 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
+   
   </head>
-
+<div class="body-container">
   <body>
-    <div class="weather-app">
-      <header>
-        <form class="search-form" id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            id="search-form-city"
-            class="search-form-input"
-          />
-          <input type="submit" value="Search" class="search-form-button" />
-        </form>
-      </header>
-      <main>
-        <h1>
-          <div class="weather-icon">
-            <div id="icon"></div>
-            <div class="current-date-time">
-              <span id="time"></span>
-            </div>
+    
+      <div class="weather-app">
+        <header>
+          <form class="search-form" id="search-form">
+            <input
+              type="search"
+              placeholder="Enter a city.."
+              required
+              id="search-form-city"
+              class="search-form-input"
+            />
+            <input type="submit" value="Search" class="search-form-button" />
+          </form>
+        </header>
+        <main>
+          <h1>
+            <div class="weather-icon">
+              </div>
+           <div id="icon"></div>
+            <div class="weather-value" id="temperature">12</div>
+            <div class="weather-unit" id="temperature-unit">°C</div>
+          </h1>
+          <p></p>
+          <h2><div class="weather-city" id="city"></div></h2>
+          <div></div>
+          <div class="weather-feel">
+            
+            <p>
+              <div class="current-date-time">
+                <span id="time"></span>
+              </div>
+              Weather description:
+              <strong> <span id="weather-condition"></span></strong>
+              <br />
+              Humidity:<strong><span id="humidity">66</span></strong
+              >, Windy:<strong><span id="windy">3.13</span></strong>
+            </p>
           </div>
-          <div class="weather-value" id="temperature">12</div>
-          <div class="weather-unit" id="temperature-unit">°C</div>
-        </h1>
-        <p></p>
-        <h2><div class="weather-city" id="city"></div></h2>
-        <div></div>
-        <div class="weather-feel">
-          <p>
-            Weather description:
-            <strong> <span id="weather-condition"></span></strong>
-            <br />
-            Humidity:<strong><span id="humidity">66</span></strong
-            >, Windy:<strong><span id="windy">3.13</span></strong>
-          </p>
-        </div>
-      </main>
+        </main>
 
-      <footer>
-        This project was coded by
-        <a href="https://github.com/EmyOzo" target="_blank">Imomoemi Ozori</a>
-        code hosted on
-        <a href="https://github.com/EmyOzo/New-weather-app" target="_blank"
-          >Github</a
-        >
-        and website hosted on<a
-          href="https://main--emy-app.netlify.app/"
-          target=""
-        >
-          Netlify</a
-        >
-      </footer>
+        <footer>
+          This project was coded by
+          <a href="https://github.com/EmyOzo" target="_blank">Imomoemi Ozori</a>
+          code hosted on
+          <a href="https://github.com/EmyOzo/New-weather-app" target="_blank"
+            >Github</a
+          >
+          and website hosted on<a
+            href="https://main--emy-app.netlify.app/"
+            target=""
+          >
+            Netlify</a
+          >
+        </footer>
+      </div>
+      <script src="src/Index.js"></script>
     </div>
-    <script src="src/Index.js"></script>
   </body>
+  </div>
 </html>
